@@ -1,27 +1,43 @@
-import React from 'react';
-import './App.scss';
+import {
+  Navigate, Route, Routes,
+} from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { AuthForm } from './components/Auth/AuthForm';
+import { TodosPage } from './components/Pages/todosPage';
+import { User } from './types/User';
 
-interface Props {
-  onClick: () => void;
-}
+export const App = () => {
+  const [user, setUser] = useState<User | null>(null);
 
-export const Provider: React.FC<Props> = React.memo(
-  ({ onClick, children }) => (
-    <button
-      type="button"
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  ),
-);
+  useEffect(() => {
+    const userData = localStorage.getItem('user');
 
-export const App: React.FC = () => {
+    if (userData) {
+      const userFromLocalStorage = JSON.parse(userData) as User;
+
+      setUser(userFromLocalStorage);
+    }
+  }, []);
+
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>
-        <TodoList />
-      </Provider>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={<AuthForm onLogin={setUser} />}
+      />
+
+      <Route path="home" element={<Navigate to="/" replace />} />
+
+      <Route path={`${user?.id}/todos`} element={<TodosPage user={user} />} />
+
+      <Route
+        path="*"
+        element={(
+          <h1 className="title">
+            You must to register
+          </h1>
+        )}
+      />
+    </Routes>
   );
 };

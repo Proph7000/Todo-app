@@ -1,9 +1,19 @@
-# React TypeScript Starter Pack
+# Application Todo-app
 
-To use this template click `Use this template`
+  [DEMO LINK](https://proph7000.github.io/Todo-app/)
 
-### Available Scripts
+# Technologies used: 
+  - React + Typescript (including React Router);
+  - SCSS + CSS framework Bulma;
+  - [REST API](https://mate-academy.github.io/fe-students-api/);
 
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
+# Implemented features:
+  - authorization, creating a new and saving 
+    an active user in the local storage
+  - adding todo;
+  - delete one/all todos;
+  - double click/tap editing todo;
+  - status update of one/all todos;
+  - filtering by parameters: show all/active/completed;
+  - counter of the number of unfinished todos;
+  - added animations when appearing/disappearing todos;

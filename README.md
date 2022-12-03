@@ -1,11 +1,11 @@
-# ToDo application
+# ToDo List application
 
   [DEMO LINK](https://proph7000.github.io/Todo-app/)
 
 # What is a ToDo List?
   What is a ToDo List? The definition is a simple one. It’s a list of tasks you need to complete or things that you want to do. 
 
-# The Benefits of Using a To Do List
+# The Benefits of Using a ToDo List
   One of the most important reasons you should use a to do list is that it will help you stay organised. When you write all your tasks in a list, they seem more manageable. When you’ve got a clear outline of the tasks you’ve got to do and those you’ve completed, it helps you stay focused. While freeing up space in your mind for other more creative tasks.
 
   When you complete a task, you can cross it off your list. This gives you a sense of progress and achievement, something you’ll lack if you’re always rushing from one task to the next. If you feel a sense of achievement, it spurs you on and motivates you to keep moving forward.
